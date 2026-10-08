@@ -1,0 +1,45 @@
+
+package com.example.tpgrupal4.Practico_Grupal_4_SpringBoot.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+/**
+ *
+ * @author italo
+ */
+@Entity
+@Table(name="rubro")
+public class Rubro extends AuditoriaApp{
+    @Column(nullable = false)
+    private String denominacion;
+    @Column(nullable = false)
+    private Integer codigo;
+
+    public Rubro() {
+    }
+
+    public Rubro(String denominacion, Integer codigo) {
+        this.denominacion = denominacion;
+        this.codigo = codigo;
+    }
+
+    public String getDenominacion() {
+        return denominacion;
+    }
+
+    public void setDenominacion(String denominacion) {
+        this.denominacion = denominacion;
+    }
+
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+    
+    
+}
