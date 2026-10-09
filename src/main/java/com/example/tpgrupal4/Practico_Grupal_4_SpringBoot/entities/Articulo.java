@@ -1,4 +1,3 @@
-
 package com.example.tpgrupal4.Practico_Grupal_4_SpringBoot.entities;
 
 import jakarta.persistence.Column;
@@ -6,12 +5,21 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
  * @author italo
  */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 @Entity
 @Table (name="articulo")
 public class Articulo extends AuditoriaApp {
@@ -23,47 +31,4 @@ public class Articulo extends AuditoriaApp {
     private String denominacion;
     @ManyToOne(fetch = FetchType.LAZY)
     private Marca marca;
-
-    public Articulo() {
-    }
-
-    public Articulo(Rubro rubro, String codigo, String denominacion, Marca marca) {
-        this.rubro = rubro;
-        this.codigo = codigo;
-        this.denominacion = denominacion;
-        this.marca = marca;
-    }
-
-    public Rubro getRubro() {
-        return rubro;
-    }
-
-    public void setRubro(Rubro rubro) {
-        this.rubro = rubro;
-    }
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    public String getDenominacion() {
-        return denominacion;
-    }
-
-    public void setDenominacion(String denominacion) {
-        this.denominacion = denominacion;
-    }
-
-    public Marca getMarca() {
-        return marca;
-    }
-
-    public void setMarca(Marca marca) {
-        this.marca = marca;
-    } 
-    
 }

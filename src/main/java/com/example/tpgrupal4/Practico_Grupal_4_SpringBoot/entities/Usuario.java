@@ -1,14 +1,23 @@
-
 package com.example.tpgrupal4.Practico_Grupal_4_SpringBoot.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
  * @author italo
  */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 @Entity
 @Table(name = "usuario")
 public class Usuario extends EntityId {
@@ -20,48 +29,4 @@ public class Usuario extends EntityId {
     private String nombre;
     @Column(nullable = false)
     private String apellido;
-
-    public Usuario() {
-    }
-
-    public Usuario(String usuario, String clave, String nombre, String apellido) {
-        this.usuario = usuario;
-        this.clave = clave;
-        this.nombre = nombre;
-        this.apellido = apellido;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-    
-    
 }

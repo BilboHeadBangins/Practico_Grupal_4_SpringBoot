@@ -1,118 +1,35 @@
-
 package com.example.tpgrupal4.Practico_Grupal_4_SpringBoot.entities;
 
-import java.time.LocalDateTime;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
  * @author italo
  */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 @Entity
 @Table (name="lista_precio_articulo")
 public class ListaPrecioArticulo extends AuditoriaApp{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="lista_precio_id", nullable = false)
     private ListaPrecio listaPrecio;
-    @Column(name="precio_venta_id", nullable = false)
+    @Column(name="precio_venta", nullable = false)
     private double precioVenta;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="articulo_id", nullable = false)
     private Articulo articulo;
-
-    public ListaPrecioArticulo() {
-    }
-
-    public ListaPrecioArticulo(ListaPrecio listaPrecio, double precioVenta, Articulo articulo) {
-        this.listaPrecio = listaPrecio;
-        this.precioVenta = precioVenta;
-        this.articulo = articulo;
-    }
-
-    public ListaPrecio getListaPrecio() {
-        return listaPrecio;
-    }
-
-    public void setListaPrecio(ListaPrecio listaPrecio) {
-        this.listaPrecio = listaPrecio;
-    }
-
-    public double getPrecioVenta() {
-        return precioVenta;
-    }
-
-    public void setPrecioVenta(double precioVenta) {
-        this.precioVenta = precioVenta;
-    }
-
-    public Articulo getArticulo() {
-        return articulo;
-    }
-
-    public void setArticulo(Articulo articulo) {
-        this.articulo = articulo;
-    }
-
-    public LocalDateTime getFechaAlta() {
-        return fechaAlta;
-    }
-
-    public void setFechaAlta(LocalDateTime fechaAlta) {
-        this.fechaAlta = fechaAlta;
-    }
-
-    public LocalDateTime getFechaBaja() {
-        return fechaBaja;
-    }
-
-    public void setFechaBaja(LocalDateTime fechaBaja) {
-        this.fechaBaja = fechaBaja;
-    }
-
-    public LocalDateTime getFechaModificacion() {
-        return fechaModificacion;
-    }
-
-    public void setFechaModificacion(LocalDateTime fechaModificacion) {
-        this.fechaModificacion = fechaModificacion;
-    }
-
-    public Usuario getUsuarioCarga() {
-        return usuarioCarga;
-    }
-
-    public void setUsuarioCarga(Usuario usuarioCarga) {
-        this.usuarioCarga = usuarioCarga;
-    }
-
-    public Usuario getUsuarioBaja() {
-        return usuarioBaja;
-    }
-
-    public void setUsuarioBaja(Usuario usuarioBaja) {
-        this.usuarioBaja = usuarioBaja;
-    }
-
-    public Usuario getUsuarioModificacion() {
-        return usuarioModificacion;
-    }
-
-    public void setUsuarioModificacion(Usuario usuarioModificacion) {
-        this.usuarioModificacion = usuarioModificacion;
-    }
-
-    public Long getId() {
-        return Id;
-    }
-
-    public void setId(Long Id) {
-        this.Id = Id;
-    }
-    
-    
 }
