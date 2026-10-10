@@ -23,7 +23,7 @@ import lombok.Setter;
 @Entity
 @Table (name="cliente")
 public class Cliente extends AuditoriaApp{
-    @Column(nullable = false)
+    @Column(name="cuitcuil",nullable = false)
     private String cuitCuil;
     @Column(nullable = false)
     private String denominacion;

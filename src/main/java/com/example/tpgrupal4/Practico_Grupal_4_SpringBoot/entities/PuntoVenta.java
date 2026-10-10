@@ -24,6 +24,8 @@ public class PuntoVenta extends AuditoriaApp{
     @Column(nullable = false)
     private int numero;
     private String descripcion;
+    @Column(name="tipoemision")
     private String tipoEmision;
+    @Column(name="domiciliocomercial")
     private String domicilioComercial;
 }

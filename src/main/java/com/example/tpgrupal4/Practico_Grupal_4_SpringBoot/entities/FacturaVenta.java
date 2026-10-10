@@ -38,18 +38,24 @@ public class FacturaVenta extends AuditoriaApp{
     @JoinColumn(name="punto_venta_id", nullable=false)
     private PuntoVenta puntoVenta;
 
+    @Column(name="importecobrado")
     private double importeCobrado;
+    @Column(name="importesaldo")
     private double importeSaldo;
 
     @Column(name="importe_total", nullable = false)
     private double importeTotal;
     private String cae;
+    @Column(name="caefechavencimiento")
     private LocalDate caeFechaVencimiento;
+    @Column(name="resultadoafip")
     private String resultadoAfip;
+    @Column(name="motivorechazo")
     private String motivoRechazo;
 
     @Column(name = "estado", nullable = false)
     private String estado;
+    @Column(name="fechaanulacion")
     private LocalDate fechaAnulacion;
     private String observaciones;
     

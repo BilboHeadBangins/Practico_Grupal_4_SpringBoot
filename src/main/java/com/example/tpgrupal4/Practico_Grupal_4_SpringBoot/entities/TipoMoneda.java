@@ -21,7 +21,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "tipo_moneda")
 public class TipoMoneda extends AuditoriaApp{
-    @Column(nullable = false)
+    @Column(name="codigoafip",nullable = false)
     private String codigoAfip;
     @Column(nullable = false)
     private String denominacion;

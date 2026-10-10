@@ -35,11 +35,14 @@ public class FacturaVentaDetalle extends EntityId {
     private String descripcion;
     @Column(nullable = false)
     private double cantidad;
-    @Column(nullable = false)
+    @Column(name="preciounitario",nullable = false)
     private double precioUnitario;
+    @Column(name="porcentajebonificacion")
     private double porcentajeBonificacion;
+    @Column(name="importeneto")
     private double importeNeto;
+    @Column(name="importeiva")
     private double importeIva;
-    @Column(nullable = false)
+    @Column(name="importesubtotal",nullable = false)
     private double importeSubtotal;
 }

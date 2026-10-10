@@ -21,7 +21,7 @@ import lombok.Setter;
 @Entity
 @Table (name = "condicion_iva")
 public class CondicionIva extends AuditoriaApp{
-    @Column(nullable = false)
+    @Column(name="codigoafip",nullable = false)
     private int codigoAfip;
     @Column(nullable = false)
     private String denominacion;
