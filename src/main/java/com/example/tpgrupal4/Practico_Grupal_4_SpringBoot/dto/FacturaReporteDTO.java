@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.stereotype.Service;
 
 
 /**
@@ -19,6 +21,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class FacturaReporteDTO {
     private Long numeroFactura;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate fechaEmision;
     private String clienteDenominacion;
     private String condicionIva;

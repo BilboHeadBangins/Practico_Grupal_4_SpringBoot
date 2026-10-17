@@ -34,6 +34,17 @@ public class FacturaVenta extends AuditoriaApp{
     private Long numero;
     @Column(name="fecha_emision",nullable = false)
     private LocalDate fechaEmision;
+    
+    //¿por qué no estaba antes?
+    @ManyToOne
+    @JoinColumn(name="cliente_id", nullable = true)
+    private Cliente cliente;
+    
+    //lo mismo con esta. En la próxima ejecución tendré que cambiar los nullable de cliente y civa a false, o no, no sé.
+    @ManyToOne
+    @JoinColumn(name="condicion_iva_id", nullable = true)
+    private CondicionIva condicionIva;
+    
     @ManyToOne
     @JoinColumn(name="punto_venta_id", nullable=false)
     private PuntoVenta puntoVenta;
