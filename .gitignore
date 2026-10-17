@@ -34,3 +34,5 @@ build/
 
 # Log local de contexto opencode
 contexto.md
+
+application.properties
