@@ -14,8 +14,6 @@ public class PracticoGrupal4SpringBootApplication {
 
                 try {
                     FacturaService reporte = context.getBean(FacturaService.class);
-                    reporte.createPdf("ReporteFacturas.pdf");
-                    reporte.crearTsv("ReporteFacturas.txt");
                     reporte.createPdf(reporte.FILE);
                     System.out.println("PDF creado exitosamente: " + reporte.FILE);
                     

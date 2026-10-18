@@ -22,7 +22,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  *
@@ -32,8 +31,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class FacturaService {
     @PersistenceContext
     private EntityManager em;
-    
-    @GetMapping
+
     public List<FacturaReporteDTO> buscarFacturasFiltradas(LocalDate fechaDesde, LocalDate fechaHasta, String estado, Double montoMinimo){
 
         StringBuilder jpql = new StringBuilder(
@@ -72,8 +70,7 @@ public class FacturaService {
         return query.getResultList();
     }
     
-    
-    //Parte 2. Todo esto debería ir en otro lado, para separar mejor las responsabilidades.
+
     public static final String FILE = "ReporteFacturas.pdf";
     
     public static final String FILETXT = "ReporteFacturas.txt";
