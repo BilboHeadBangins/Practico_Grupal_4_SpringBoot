@@ -1,0 +1,9 @@
+Número	Fecha	Cliente	Condición IVA	Punto de venta	Importe	Items
+938	2026-09-19	Laura Molina	Monotributista	Carrefour Express Centro	38500.0	1
+939	2026-09-18	Laura Molina	Monotributista	Carrefour Minimarket	29700.0	2
+940	2026-09-16	Nicolás Pérez	Monotributista	Carrefour Express Centro	48400.0	2
+936	2026-09-21	Alex Arce	Responsable inscripto	Carrefour Express Centro	24000.5	2
+937	2026-09-20	Alex Arce	Responsable inscripto	Carrefour Minimarket	66000.0	1
+941	2026-09-14	Nicolás Pérez	Monotributista	Carrefour Minimarket	90200.0	2
+942	2026-09-11	Consumidor Final	Monotributista	Carrefour Express Centro	21450.0	1
+935	2026-09-21	Alex Arce	Responsable inscripto	Carrefour Minimarket	50152.5	2

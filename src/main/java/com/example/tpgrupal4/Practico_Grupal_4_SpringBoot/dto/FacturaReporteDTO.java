@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +15,9 @@ import org.springframework.stereotype.Service;
  *
  * @author italo
  */
-
 @Getter
 @Setter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class FacturaReporteDTO {
@@ -26,7 +27,8 @@ public class FacturaReporteDTO {
     private String clienteDenominacion;
     private String condicionIva;
     private String puntoVentaDescripcion;
-    private double importeTotal;
-    private long cantidadItems;
+    private Double importeTotal;
+    private Long cantidadItems;
+
 
 }
